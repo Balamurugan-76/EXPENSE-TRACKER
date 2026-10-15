@@ -1,38 +1,209 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:transparent; 
+  color: #273d48;
+  background-image: url('./acesset/ET.webp');
+  padding: 1px ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  background: #243b55;
+  color: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: white;
+  
+}
+
+.header button {
+  border: none;
+  background: transparent;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background: #3d5875;
+  border-radius: 5px;
+}
+
+main {
+  min-height: 75vh;
+  padding: 30px 5%;
+}
+
+.home,
+.login-box,
+.page {
+  
+  height: 80vh;
+  background:transparent;
+  width: 80%;
+  padding: 25px;
+  border : none;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  box-shadow: 0 2px 8px #0000000d;
+}
+
+.home {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.home button,
+.login-box button,
+.expense-form button {
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home button:hover,
+.login-box button:hover,
+.expense-form button:hover {
+  background: #1d4ed8;
+}
+
+.login-box {
+  max-width: 400px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-box input {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-box button {
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #edf4ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  color: #2563eb;
+}
+
+.expense-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 20px 0 30px;
+}
+
+.expense-form input,
+.expense-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 0;
+}
+
+.transaction,
+.report-row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 12px;
+  padding: 15px 5px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.transaction p {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  background: #243b55;
   color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer p {
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    padding: 18px 12px;
+  }
+
+  .home,
+  .login-box,
+  .page {
+    padding: 20px 15px;
   }
 }
